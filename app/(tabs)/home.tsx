@@ -7,18 +7,18 @@ export default function Screen () {
     const products = getAllProducts();
 
     return (
-        <View style={style.container}>
+        <View style={styles.container}>
             <FlatList 
                 data={products}
                 renderItem={({ item}) => <ProductItem data={item} />}
                 keyExtractor={item => item.id.toString()}
-                style={style.list}
+                style={styles.list}
             />
         </View>
     );
 }
 
-const style = StyleSheet.create({
+const styles = StyleSheet.create({
     container: {
         flex: 1
     },

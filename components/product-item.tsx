@@ -8,23 +8,23 @@ type Props = {
 export const ProductItem = ({ data }: Props) => {
     return (
         <Link href={`/product/${data.id}`} asChild>
-            <Pressable style={style.container}>
+            <Pressable style={styles.container}>
                 <Image
-                    style={style.img}
+                    style={styles.img}
                     source={{ uri: data.image}}
                     resizeMode="cover"
                 />
-                <View style={style.info}>
-                    <Text style={style.title}>{data.title}</Text>
-                    <Text style={style.description}>{data.description}</Text>
-                    <Text style={style.price}>R$ {data.price.toFixed(2)}</Text>
+                <View style={styles.info}>
+                    <Text style={styles.title}>{data.title}</Text>
+                    <Text style={styles.description}>{data.description}</Text>
+                    <Text style={styles.price}>R$ {data.price.toFixed(2)}</Text>
                 </View>
             </Pressable>
         </Link>
     );
 }
 
-const style = StyleSheet.create({
+const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
         marginBottom: 20
